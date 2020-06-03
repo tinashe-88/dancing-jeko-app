@@ -1,44 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from 'react'
+import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-import { Section, Container } from '@components/global';
+import { Section, Container } from '@components/global'
 
 const TEAM = [
   {
-    name: 'Josh Peck',
-    image: 'josh.jpg',
-    role: 'Founder',
+    name: 'Amanda Hamp',
+    image: 'amanda.jpg',
+    role: 'Assistant Professor of Dance History and Criticism, Contemporary Dance',
   },
   {
-    name: 'Lisa Haydon',
-    image: 'lisa.jpg',
-    role: 'Art Director',
+    name: 'Donna Jewel',
+    image: 'donna.jpg',
+    role: 'Department Chair Professor of Dance Contemporary Dance, Head of Dance',
   },
   {
-    name: 'Ashlyn Harris',
-    image: 'ashlyn.jpg',
-    role: 'Frontend Engineer',
-  },
-  {
-    name: 'Todd Joseph',
-    image: 'todd.jpg',
-    role: 'Designer',
-  },
-  {
-    name: 'Martin White',
-    image: 'martin.jpg',
-    role: 'Backend Engineer',
-  },
-  {
-    name: 'Rose Leslie',
-    image: 'rose.jpg',
-    role: 'Marketing',
+    name: 'Tendai Muparuta',
+    image: 'tendai.jpg',
+    role: 'Artist in Residence in African Music Performance, Lecturer in Music, Director of Zambezi, Co-Director of Kusika',
   },
 ];
 
-const Team = () => (
+const References = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -67,22 +52,29 @@ const Team = () => (
       }
     `}
     render={data => (
-      <Section id="team" accent="secondary">
+      <Section id="references" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h1>The Team</h1>
+          <h2>References</h2>
           <TeamGrid>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(
-                ({ node }) => node.relativePath === image
-              ).node;
+                ({ node }) => (node.relativePath) === image
+              ).node
 
               return (
                 <div key={name}>
                   <Img fluid={img.childImageSharp.fluid} alt={name} />
                   <Title>{name}</Title>
                   <Subtitle>{role}</Subtitle>
+                  <Comment>
+                    <i>
+                      Neque porro quisquam est qui 
+                      dolorem ipsum quia dolor sit amet, consectetur, 
+                      adipisci velit...
+                    </i>
+                  </Comment>
                 </div>
-              );
+              )
             })}
           </TeamGrid>
           <Art>
@@ -95,7 +87,7 @@ const Team = () => (
       </Section>
     )}
   />
-);
+)
 
 const TeamGrid = styled.div`
   display: grid;
@@ -118,7 +110,7 @@ const TeamGrid = styled.div`
   @media (max-width: ${props => props.theme.screen.xs}) {
     grid-gap: 24px;
   }
-`;
+`
 
 const Art = styled.figure`
   width: 800px;
@@ -134,7 +126,7 @@ const Art = styled.figure`
   @media (max-width: ${props => props.theme.screen.md}) {
     display: none;
   }
-`;
+`
 
 const ArtMobile = styled.figure`
   width: 100%;
@@ -146,16 +138,22 @@ const ArtMobile = styled.figure`
   @media (max-width: ${props => props.theme.screen.md}) {
     display: block;
   }
-`;
+`
 
 const Title = styled.p`
   margin-top: 16px;
   color: ${props => props.theme.color.black.regular};
-`;
+`
 
 const Subtitle = styled.p`
+  margin: 20px 0;
   ${props => props.theme.font_size.small};
   color: ${props => props.theme.color.black.light};
-`;
+`
 
-export default Team;
+const Comment = styled.blockquote`
+  font-size: 12pt;
+  color: ${props => props.theme.color.black.light};
+`
+
+export default References

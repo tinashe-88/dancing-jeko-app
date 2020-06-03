@@ -11,32 +11,36 @@ import {
   NavListWrapper,
   MobileMenu,
   Mobile,
-} from './style';
+} from './style'
 
-import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+import { ReactComponent as MenuIcon } from '@static/icons/menu.svg'
 
-const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ'];
+const NAV_ITEMS = ['Home', 'About', 'References', 'Philosophy', 'Contact']
 
 class Navbar extends Component {
   state = {
     mobileMenuOpen: false,
-  };
+  }
 
   toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }));
-  };
+    this.setState(prevState => (
+      { 
+        mobileMenuOpen: !prevState.mobileMenuOpen 
+      }
+    ))
+  }
 
   closeMobileMenu = () => {
     if (this.state.mobileMenuOpen) {
-      this.setState({ mobileMenuOpen: false });
+      this.setState({ mobileMenuOpen: false })
     }
-  };
+  }
 
   getNavAnchorLink = item => (
     <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
-  );
+  )
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
@@ -47,14 +51,16 @@ class Navbar extends Component {
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem key={navItem}>
+            {this.getNavAnchorLink(navItem)}
+          </NavItem>
         ))}
       </Scrollspy>
     </NavListWrapper>
-  );
+  )
 
   render() {
-    const { mobileMenuOpen } = this.state;
+    const { mobileMenuOpen } = this.state
 
     return (
       <Nav {...this.props}>
@@ -76,8 +82,8 @@ class Navbar extends Component {
           )}
         </Mobile>
       </Nav>
-    );
+    )
   }
 }
 
-export default Navbar;
+export default Navbar

@@ -65,6 +65,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     cursor: pointer;
+    transition: color 0.5 ease-in-out;
   }
 `;
 

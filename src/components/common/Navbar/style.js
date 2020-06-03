@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { Container } from '@components/global';
+import { Container } from '@components/global'
 
 export const Nav = styled.nav`
   padding: 16px 0;
@@ -9,13 +9,13 @@ export const Nav = styled.nav`
   width: 100%;
   top: 0;
   z-index: 1000;
-`;
+`
 
 export const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 export const NavListWrapper = styled.div`
   ul {
@@ -37,7 +37,7 @@ export const NavListWrapper = styled.div`
         }
       `};
   }
-`;
+`
 
 export const NavItem = styled.li`
   margin: 0 0.75em;
@@ -48,24 +48,29 @@ export const NavItem = styled.li`
     text-decoration: none;
     opacity: 0.7;
     color: ${props => props.theme.color.black.regular};
+    
+    &:hover {
+      color: ${props => props.theme.color.white.dark};
+    }
   }
 
   &.active {
     a {
       opacity: 1;
+      color: ${props => props.theme.color.white.dark};
     }
   }
-`;
+`
 
 export const MobileMenu = styled.div`
   width: 100%;
   background: ${props => props.theme.color.primary};
-`;
+`
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.large};
-`;
+`
 
 export const Mobile = styled.div`
   display: none;
@@ -83,4 +88,4 @@ export const Mobile = styled.div`
       display: none;
     }
   `}
-`;
+`
