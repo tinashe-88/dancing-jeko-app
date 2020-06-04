@@ -7,7 +7,8 @@ import { Section, Container } from '@components/global'
 
 import {
   Art,
-  Grid
+  Grid,
+  TitleContainer
 } from './About.styles'
 
 const About = () => (
@@ -70,10 +71,12 @@ const About = () => (
     `}
     render={data => (
       <Section id="about">
+        <TitleContainer>
+          <h2>About</h2>
+        </TitleContainer>
         <Container>
           <Grid>
             <div>
-              <h2>About</h2>
               <p>
                 I have lived in the United States as an artist for more than 
                 half of my life.  I am a product of two very different worlds 
@@ -99,7 +102,7 @@ const About = () => (
                 collaboration is necessary in shaping and fueling my own 
                 creativity.  I enjoy the coming together of minds and the 
                 blending of mutual ideas that often result in original, 
-                innovative productions. These collaborations with institutions, 
+                innovative productions. These collaborations with institutions,
                 communities and individuals from all over the world, 
                 constantly place me at a meeting point of cultures. This gives 
                 me the freedom to work with musicians, dancers, and writers 

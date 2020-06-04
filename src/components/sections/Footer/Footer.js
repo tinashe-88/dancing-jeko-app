@@ -1,10 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { Container } from '@components/global'
 import ExternalLink from '@common/ExternalLink'
+
+import {
+  FooterWrapper,
+  Copyright,
+  Art,
+  StyledContainer
+} from './Footer.styles'
 
 const Footer = () => (
   <StaticQuery
@@ -42,8 +48,17 @@ const Footer = () => (
                 {` `}
                 <br/>
                 Illustrations by
-                <ExternalLink href="https://twitter.com/hopefully_sekai">
-                {` `}  @hopefully_sekai
+                <ExternalLink 
+                  href="https://twitter.com/hopefully_sekai"
+                >
+                {` `}@hopefully_sekai
+                </ExternalLink>
+                <br/>
+                Created by
+                <ExternalLink 
+                  href="https://twitter.com/@tinashe88"
+                >
+                {` `}@tinashe88
                 </ExternalLink>
               </span>
             </Copyright>
@@ -53,39 +68,5 @@ const Footer = () => (
     )}
   />
 )
-
-const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.primary};
-  padding: 32px 0;
-`
-
-const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.gray.light};
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`
-
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
-`
-
-const StyledContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    flex-direction: column;
-    text-align: center;
-  }
-`
 
 export default Footer

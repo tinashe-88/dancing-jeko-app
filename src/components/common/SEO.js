@@ -3,14 +3,14 @@ import Helmet from 'react-helmet';
 
 const SEO_DATA = {
   description: 'An absurd gatsby starter',
-  title: 'Absurd',
+  title: 'Rujeko Dumbutshena',
   url: '',
-  author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
+  author: 'tinashe88',
+  keywords: ['rujeko', 'dumbutshena', 'dance'],
   img: '',
   twitterId: '@ajayns_',
   facebookId: '',
-};
+}
 
 const SEO = () => {
   return (
@@ -36,7 +36,7 @@ const SEO = () => {
       <title>{SEO_DATA.title}</title>
       <html lang="en" />
     </Helmet>
-  );
-};
+  )
+}
 
-export default SEO;
+export default SEO

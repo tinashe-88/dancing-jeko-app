@@ -44,7 +44,3 @@ export const Art = styled.figure`
   max-width: 380px;
   width: 100%;
 `
-
-export const TitleContainer = styled.div`
-  text-align: center;
-`
