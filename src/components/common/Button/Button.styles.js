@@ -28,4 +28,9 @@ export const ButtonStyles = styled.button`
     border: 1px solid #000;
     transition: ${transitionAnimation};
   }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    width: 100%;
+    padding: 0;
+  }
 `

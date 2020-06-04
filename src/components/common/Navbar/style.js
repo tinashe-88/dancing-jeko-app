@@ -4,11 +4,12 @@ import { Container } from '@components/global'
 
 export const Nav = styled.nav`
   padding: 16px 0;
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.secondary};
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
 `
 
 export const StyledContainer = styled(Container)`
@@ -64,7 +65,7 @@ export const NavItem = styled.li`
 
 export const MobileMenu = styled.div`
   width: 100%;
-  background: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.secondary};
 `
 
 export const Brand = styled.div`

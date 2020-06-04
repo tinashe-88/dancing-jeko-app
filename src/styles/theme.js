@@ -20,9 +20,16 @@ const theme = {
       light: '#564F62',
       regular: '#211E26',
     },
+    gray: {
+      dark: '#999999',
+      light: '#EEEEEE',
+      regular: '#CCCCCC',
+    },
     primary: '#8bd8ed',
+    secondary: '#d3d3d3'
   },
   screen: {
+    xxs: '375px',
     xs: '575px',
     sm: '767px',
     md: '991px',

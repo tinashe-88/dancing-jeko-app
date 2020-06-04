@@ -67,6 +67,10 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     transition: color 0.5 ease-in-out;
   }
+
+  ul, li {
+    list-style: none;
+  }
 `;
 
 export default GlobalStyles;
