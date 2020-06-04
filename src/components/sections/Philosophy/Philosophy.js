@@ -41,6 +41,46 @@ const Philosophy = () => (
             }
           }
         }
+        alicia: file(
+          sourceInstanceName: { eq: "team" }
+          name: { eq: "alicia" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        gabi: file(
+          sourceInstanceName: { eq: "team" }
+          name: { eq: "gabi" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        morgan_amadi: file(
+          sourceInstanceName: { eq: "team" }
+          name: { eq: "morgan-and-amadi" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        rain: file(
+          sourceInstanceName: { eq: "team" }
+          name: { eq: "rain" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -78,12 +118,12 @@ const Philosophy = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
+              <Img fluid={data.gabi.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
+              <Img fluid={data.alicia.childImageSharp.fluid} />
             </Art>
             <div>
               <p>
@@ -122,12 +162,12 @@ const Philosophy = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.morgan_amadi.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.rain.childImageSharp.fluid} />
             </Art>
             <div>
               <p>
@@ -146,7 +186,6 @@ const Philosophy = () => (
                 citizenship.
               </p>
             </div>
-            
           </Grid>
         </Container>
       </Section>

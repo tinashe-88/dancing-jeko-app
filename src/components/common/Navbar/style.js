@@ -51,7 +51,8 @@ export const NavItem = styled.li`
     color: ${props => props.theme.color.black.regular};
     
     &:hover {
-      color: ${props => props.theme.color.white.dark};
+      color: ${props => props.theme.color.gray.dark};
+      transition: color .23s ease-in; 
     }
   }
 

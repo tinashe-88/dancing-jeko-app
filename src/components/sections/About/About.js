@@ -46,6 +46,26 @@ const About = () => (
             }
           }
         }
+        rujeko_image: file(
+          sourceInstanceName: { eq: "team" }
+          name: { eq: "rujeko" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        rujeko_image_2: file(
+          sourceInstanceName: { eq: "team" }
+          name: { eq: "rujeko2" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -64,7 +84,7 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
+              <Img fluid={data.rujeko_image.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
@@ -105,7 +125,7 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.rujeko_image_2.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
@@ -143,6 +163,9 @@ const About = () => (
             </Art>
           </Grid>
           <Grid inverse>
+            <Art>
+              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+            </Art>
             <div>
               <p>
                 African artists who are finding self-expression through the 
@@ -151,9 +174,6 @@ const About = () => (
                 world.
               </p>
             </div>
-            <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
-            </Art>
           </Grid>
         </Container>
       </Section>
