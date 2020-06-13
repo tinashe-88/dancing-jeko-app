@@ -13,7 +13,7 @@ export const WorksGrid = styled.div`
     text-decoration: none;
     color: ${props => props.theme.color.black.regular};
     &:hover {
-      color: ${props => props.theme.color.gray.light};
+      color: ${props => props.theme.color.gray.dark};
     }
   }
 
