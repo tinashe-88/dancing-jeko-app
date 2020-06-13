@@ -21,11 +21,11 @@ const theme = {
       regular: '#211E26',
     },
     gray: {
-      dark: '#999999',
+      dark: '#777777',
       light: '#EEEEEE',
       regular: '#CCCCCC',
     },
-    primary: '#8bd8ed',
+    primary: '#FBF1A9',
     secondary: '#d3d3d3'
   },
   screen: {

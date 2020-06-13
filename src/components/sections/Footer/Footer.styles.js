@@ -10,7 +10,7 @@ export const FooterWrapper = styled.footer`
 export const Copyright = styled.div`
   font-family: ${props => props.theme.font.secondary};
   ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.gray.light};
+  color: ${props => props.theme.color.gray.dark};
 
   a {
     text-decoration: none;
